@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="savemoney.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNC Perks</title>
+
+</head>
+<body>
+    <header>
+        <img src="banner.png" alt="">
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="perks-box">
+                <h2>How much money would you like to save per month?</h2>
+                $<input type="number" id="monthlySavings" value="$"/>
+                <button onclick="calculateSavings()">Calculate</button>
+            </div>
+            <div class="rounded-rectangle">
+                How much you could save per year:
+            <h2 id="annualSavings"></h2>
+        </div>
+        </section>
+    </main>
+
+    <script>
+        function calculateSavings() {
+            const monthlySavings = document.getElementById('monthlySavings').value;
+            const annualSavings = monthlySavings * 12;
+            document.getElementById('annualSavings').innerText = `$${annualSavings}`;        
+        }
+    </script>
+</body>
+</html>
