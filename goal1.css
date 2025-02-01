@@ -21,54 +21,62 @@
 
     .container{
         font-size: 22px;
-        margin-top: 32px;
+        margin-top: 22px;
     }
 
     .Week1 {
-        background-color: rgba(255, 183, 120, 0.8);
+        background-color: #ff8111;
         padding: 15px 15px;
         border-radius: 10px;
-        max-width: 350px;
+        max-width: 305px;
         max-height: 50px;
-        text-align: center;
+        text-align: left;
         margin-top: 25px;
-        margin-bottom: 20px;
-        line-height: 15px;
+        margin-bottom: 15px;
+        line-height: 10px;
     }
 
     .Week2 {
-        background-color: rgba(255, 183, 120, 0.8);
+        background-color:  #ff8111;
         padding: 15px 15px;
         border-radius: 10px;
-        max-width: 350px;
+        max-width: 305px;
         max-height: 50px;
-        text-align: center;
+        text-align: left;
         margin-top: 25px;
-        margin-bottom: 20px;
-        line-height: 15px;
+        margin-bottom: 15px;
+        line-height: 10px;
     }
 
     .Week3 {
-        background-color: rgba(255, 183, 120, 0.8);
+        background-color:  #ff8111;
         padding: 15px 15px;
         border-radius: 10px;
-        max-width: 350px;
+        max-width: 305px;
         max-height: 50px;
-        text-align: center;
+        text-align: left;
         margin-top: 25px;
-        margin-bottom: 20px;
-        line-height: 15px;
+        margin-bottom: 15px;
+        line-height: 10px;
     }
 
     .Week4 {
-        background-color: rgba(255, 183, 120, 0.8);
+        background-color:  #ff8111;
         padding: 15px 15px;
         border-radius: 10px;
-        max-width: 350px;
+        max-width: 305px;
         max-height: 50px;
-        text-align: center;
+        text-align: left;
         margin-top: 25px;
-        margin-bottom: 20px;
-        line-height: 15px;
+        margin-bottom: 15px;
+        line-height: 10px;
     }
 
+    .Goal5 {
+        position: absolute;
+        right: -990px; /* Adjust as needed */
+        top: 70%; /* Adjust vertical position */
+        transform: translateY(-50%); /* Centers it vertically */
+        width: 1500px; 
+        height: auto;
+    }
