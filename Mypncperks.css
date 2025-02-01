@@ -1,0 +1,125 @@
+/* Apply Montserrat font globally */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color:#003153;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    text-align: center;
+    display: flex;
+    font-weight: bold; /* Bold font for heading */
+    justify-content: center;
+    align-items: center;
+}
+header h1 img {
+    height: 1em;
+    width: auto;
+    margin: 0 10px;
+}
+
+/* Section styling */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+.button-container {
+
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 20px; /* Space between buttons */
+    padding: 20px;
+    justify-content: center;
+    position:relative;
+    height: 200px;
+    flex-wrap: wrap;
+}
+
+.circle-btn {
+    background-color: gray;
+    color: white;
+    border: none;
+    width: 150px;         /* Equal width and height for a perfect circle */
+    height: 150px;
+    border-radius: 50%;  /* Makes it circular */
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5C6B73;
+    transition: background-color 0.3s;
+    font-size :20px;
+}
+.button-container button:nth-child(1) {
+    position: absolute;
+    top: 100;
+    left: 400px ;
+    
+}
+.button-container button:nth-child(2) {
+    position: absolute;
+    top: 250px;
+    left: 420px;
+    bottom: 20px;;
+}
+.button-container button:nth-child(3) {
+position: absolute;
+top: 105px;
+left:590px;
+bottom:170px;
+}
+
+section h2 {
+    font-weight: 700; /* Bold font for subheading */
+}
+.goal-text{
+    text-align: left;
+    font-size: 65px;
+    margin-top:-95px;
+    margin-bottom: 150px;
+    margin-left: 20px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+@media (max-width:1200px) {
+    .box{
+        width: 45%;
+    }
+}
+@media(max-width:768px){
+    .box{
+        width:90%;
+    }
+}
+@media(max-width: 480px) {
+    .goal-text{
+        font-size: 16px;
+    }
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color:#003153;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+   
+}
