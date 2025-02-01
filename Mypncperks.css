@@ -6,6 +6,11 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+.pnc-font {
+    font-family: "Rotis Semi Serif", serif; /* Use Rotis Semi Serif */
+    font-weight: bold; /* Make it bold if needed */
+    margin-left: 5px;
+}
 
 /* Header styling */
 header {
@@ -22,11 +27,13 @@ header h1 {
     font-weight: bold; /* Bold font for heading */
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    ;
 }
 header h1 img {
     height: 1em;
     width: auto;
-    margin: 0 10px;
+    margin: 0 8px;
 }
 
 /* Section styling */
@@ -68,8 +75,8 @@ section {
 }
 .button-container button:nth-child(1) {
     position: absolute;
-    top: 100;
-    left: 400px ;
+    top: 150;
+    left: 500px ;
     
 }
 .button-container button:nth-child(2) {
@@ -80,8 +87,8 @@ section {
 }
 .button-container button:nth-child(3) {
 position: absolute;
-top: 105px;
-left:590px;
+top: 100px;
+left:570px;
 bottom:170px;
 }
 
