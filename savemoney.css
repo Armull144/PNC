@@ -26,7 +26,9 @@ body {
 .perks-box input {
     border: 2px solid #ff8111;
     padding: 5px;
-    font-size: 16px;
+    font-size: 24px;
+    height:60px;
+    width: 400px;
 }
 .rounded-rectangle {
     flex: 1;
@@ -35,7 +37,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    font-size: 20px;
 }
 .rounded-rectangle h2 {
-    margin-top: 20px;
+    margin: 20px;
 }
