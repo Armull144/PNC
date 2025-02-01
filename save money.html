@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PNC Perks</title>
-
 </head>
 <body>
     <header>
@@ -16,22 +15,23 @@
         <section class="content">
             <div class="perks-box">
                 <h2>How much money would you like to save per month?</h2>
-                $<input type="number" id="monthlySavings" value="$"/>
+                <input type="number" id="monthlySavings" placeholder="$"/>
                 <button onclick="calculateSavings()">Calculate</button>
             </div>
             <div class="rounded-rectangle">
-                How much you could save per year:
-            <h2 id="annualSavings"></h2>
-        </div>
+                <h2>How much you could save per year:</h2>
+                <h2 id="annualSavings"></h2>
+            </div>
         </section>
     </main>
 
     <script>
         function calculateSavings() {
-            const monthlySavings = document.getElementById('monthlySavings').value;
+            const monthlySavings = parseFloat(document.getElementById('monthlySavings').value) || 0;
             const annualSavings = monthlySavings * 12;
-            document.getElementById('annualSavings').innerText = `$${annualSavings}`;        
+            document.getElementById('annualSavings').innerText = `$${annualSavings.toFixed(2)}`;        
         }
+        document.getElementById('monthlySavings').addEventListener('input', calculateSavings);
     </script>
 </body>
 </html>
