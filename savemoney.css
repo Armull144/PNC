@@ -24,13 +24,13 @@ body {
     margin-bottom: 10px;
 }
 .perks-box input {
-    border: 2px solid orange;
+    border: 2px solid #ff8111;
     padding: 5px;
     font-size: 16px;
 }
 .rounded-rectangle {
     flex: 1;
-    background-color: orange;
+    background-color: #ff8111;
     color: white;
     padding: 20px;
     border-radius: 10px;
