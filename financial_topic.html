@@ -15,15 +15,47 @@
         <div class="left">
             <h2>What financial topics would you like to learn more about?</h2>
             <ul>
-                <li><span class="check-icon"></span> Budgets</li>
-                <li><span class="check-icon"></span> Investing</li>
-                <li><span class="check-icon"></span> Borrowing</li>
-                <li><span class="check-icon"></span> Management</li>
+                <li onclick="toggleCheck(this)">
+                    <span class="check-icon"></span> Budgets
+                </li>
+                <li onclick="toggleCheck(this)">
+                    <span class="check-icon"></span> Investing
+                </li>
+                <li onclick="toggleCheck(this)">
+                    <span class="check-icon"></span> Borrowing
+                </li>
+                <li onclick="toggleCheck(this)">
+                    <span class="check-icon"></span> Management
+                </li>
             </ul>
+            <button id="nextBtn" onclick="goToNextPage()">Next</button>
         </div>
         <div class="right">
             <img src="/img/icon.png" alt="Finance Icon">
         </div>
     </div>
+
+    <script>
+        function toggleCheck(item) {
+            item.classList.toggle("checked");
+            checkSelections();
+        }
+
+        function checkSelections() {
+            let selected = document.querySelectorAll(".checked").length;
+            let nextBtn = document.getElementById("nextBtn");
+
+            if (selected > 0) {
+                nextBtn.style.display = "block"; // Show the button
+            } else {
+                nextBtn.style.display = "none"; // Hide the button
+            }
+        }
+
+        function goToNextPage() {
+            alert("Going to the next page!");
+            // window.location.href = "next_page.html"; // Uncomment this to redirect to the next page
+        }
+    </script>
 </body>
 </html>
