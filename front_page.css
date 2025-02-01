@@ -1,18 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #e7661f;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* HEADER / NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -20,11 +12,6 @@ body {
     background-color: #2c2c2c;
     color: white;
     padding: 15px 30px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
 .navbar .logo {
@@ -57,82 +44,55 @@ body {
     cursor: pointer;
 }
 
-/* MAIN CONTENT */
 main {
-    flex: 1;
+    background-color: #e7661f;
+    padding: 100px 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 100px 20px; /* Prevents content from being hidden under navbar */
-    text-align: center;
 }
 
-/* FLEX CONTAINER FOR CONTENT */
-.container {
+.content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    max-width: 900px;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-/* PERKS BOX */
 .perks-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px 20px;
+    border-radius: 10px;
     max-width: 300px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 40px;
 }
 
 .perks-box h2 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
 .perks-box p {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
-/* FIXED BUTTON POSITION */
 .cta {
     background-color: #2c2c2c;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 10px 15px;
     cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-    display: block;
-    width: 100%;
-    margin-top: 20px;
+    border-radius: 5px;
 }
 
-/* PRODUCT IMAGE */
 .product-image {
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     background-color: #444;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .product-image {
-        margin-top: 20px;
-    }
+    font-size: 14px;
+    margin-top: 40px;
 }
