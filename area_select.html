@@ -1,27 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="area_select.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goal Select</title>
-    <link rel="stylesheet" href="/area.select.css">
+    <link rel="stylesheet" href="/area_select.css">
 </head>
+
 <body>
     <header>
-        <img src="/img/banner.png" alt="pnc banner">
+        <img src="/img/banner.png" alt="Header Image" class="header-img">
     </header>
-
-<main>
-        <div class="container">
+    <div class="container">
+        <div class="left">
             <h2>What areas would you like to spend less money on?</h2>
-            <div class="option"><input type="checkbox"> Eating out</div>
-            <div class="option"><input type="checkbox"> Shopping</div>
-            <div class="option"><input type="checkbox"> Entertainment</div>
-            <div class="option"><input type="checkbox"> Other</div>
-            <div class="icon">
-                <img src="/img/flyingMoney.png" alt="Flying Money">
+            <ul>
+                <li onclick="toggleCheck(this)">
+                    <span class="check-icon"></span> Eating out
+                </li>
+                <li onclick="toggleCheck(this)">
+                    <span class="check-icon"></span> Shopping
+                </li>
+                <li onclick="toggleCheck(this)">
+                    <span class="check-icon"></span> Entertainment
+                </li>
+                <li onclick="toggleCheck(this)">
+                    <span class="check-icon"></span> Other
+                </li>
+            </ul>
+            <button id="nextBtn" onclick="goToNextPage()">Next</button>
         </div>
-</main>
+        <div class="right">
+            <img src="/img/flyingMoney.png" alt="flying money Icon">
+        </div>
+    </div>
+
+    <script>
+        function toggleCheck(item) {
+            item.classList.toggle("checked");
+            checkSelections();
+        }
+
+        function checkSelections() {
+            let selected = document.querySelectorAll(".checked").length;
+            let nextBtn = document.getElementById("nextBtn");
+
+            if (selected > 0) {
+                nextBtn.style.display = "block"; // Show the button
+            } else {
+                nextBtn.style.display = "none"; // Hide the button
+            }
+        }
+
+        function goToNextPage() {
+            alert("Going to the next page!");
+            // window.location.href = "next_page.html"; // Uncomment this to redirect to the next page
+        }
+    </script>
 </body>
+
 </html>

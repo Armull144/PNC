@@ -45,14 +45,13 @@ ul {
 ul li {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: bisque;
     padding: 15px;
     margin: 15px 0;
     border-radius: 25px;
     font-size: 18px;
     transition: transform 0.3s, background 0.3s;
     color: black;
-    background-color: bisque;
     cursor: pointer;
 }
 
@@ -67,7 +66,7 @@ ul li:hover {
     width: 25px;
     height: 25px;
     margin-right: 15px;
-    background: #2c2c2c;
+    background: #ccc;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -75,20 +74,58 @@ ul li:hover {
     color: white;
     font-size: 16px;
     font-weight: bold;
+    transition: background 0.3s;
 }
 
-.check-icon::before {
+/* Checked State */
+ul li.checked {
+    background: lightgreen;
+    /* Change background when checked */
+    color: black;
+}
+
+ul li.checked .check-icon {
+    background: green;
+    /* Change check icon color */
+}
+
+ul li.checked .check-icon::before {
     content: '✓';
+    color: white;
 }
 
 /* Right Section */
 .right {
     display: flex;
     justify-content: center;
-    align-items: right;
+    align-items: center;
 }
 
 .right img {
     max-width: 80%;
     height: auto;
+}
+
+/* Next Button */
+#nextBtn {
+    display: none;
+    background: linear-gradient(90deg, #ff8c00, #ff6a00);
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Click Effect */
+#nextBtn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(255, 69, 0, 0.4);
 }
