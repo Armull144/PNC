@@ -1,4 +1,4 @@
-##first page 
+# #first page 
 # import tkinter as tk
 # from tkinter import Label, Canvas, Button
 
@@ -47,37 +47,36 @@
 
 
 ##Second page
-# import tkinter as tk
-# from tkinter import Label
+import tkinter as tk
+from tkinter import Label
 
-# # Create the main window
-# root = tk.Tk()
-# root.title("Goal Selection")
-# root.geometry("600x400")
-# root.configure(bg="white")
+# Create the main window
+root = tk.Tk()
+root.title("Goal Selection")
+root.geometry("600x400")
+root.configure(bg="white")
 
-# # Add the question text
-# question_label = Label(root, text="Whats\n your goal?", font=("Arial", 24, "bold"), fg="black", bg="white")
-# question_label.place(x=50, y=80)
+# Add the question text
+question_label = Label(root, text="Whats\n your goal?", font=("Arial", 24, "bold"), fg="black", bg="white")
+question_label.place(x=50, y=80)
 
-# # Function to create circular buttons
-# def create_circle_button(canvas, x, y, text):
-#     canvas.create_oval(x-50, y-50, x+50, y+50, fill="#434A52", outline="")
-#     canvas.create_text(x, y, text=text, fill="white", font=("Arial", 12, "bold"))
+# Function to create circular buttons
+def create_circle_button(canvas, x, y, text):
+    canvas.create_oval(x-50, y-50, x+50, y+50, fill="#434A52", outline="")
+    canvas.create_text(x, y, text=text, fill="white", font=("Arial", 12, "bold"))
 
-# # Create a canvas for circular buttons
-# canvas = tk.Canvas(root, width=400, height=300, bg="white", highlightthickness=0)
-# canvas.place(x=200, y=50)
+# Create a canvas for circular buttons
+canvas = tk.Canvas(root, width=400, height=300, bg="white", highlightthickness=0)
+canvas.place(x=200, y=50)
 
-# # Add circular buttons
-# create_circle_button(canvas, 100, 100, "Spend less")
-# create_circle_button(canvas, 250, 50, "Learn more")
+# Add circular buttons
+create_circle_button(canvas, 100, 100, "Spend less")
+create_circle_button(canvas, 250, 50, "Learn more")
 
-# # Save better button with 'AD' tag
-# canvas.create_oval(220, 170, 320, 270, fill="#434A52", outline="")
-# canvas.create_text(270, 220, text="Save better", fill="white", font=("Arial", 12, "bold"))
-# canvas.create_rectangle(310, 170, 330, 190, fill="blue", outline="")
-# canvas.create_text(320, 180, text="AD", fill="white", font=("Arial", 8, "bold"))
+# Save better button with 'AD' tag
+canvas.create_oval(220, 170, 320, 270, fill="#434A52", outline="")
+canvas.create_text(270, 220, text="Save better", fill="white", font=("Arial", 12, "bold"))
+canvas.create_text(320, 180, fill="white", font=("Arial", 8, "bold"))
 
-# # Run the main loop
-# root.mainloop()
+# Run the main loop
+root.mainloop()
