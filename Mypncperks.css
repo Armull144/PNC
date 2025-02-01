@@ -85,6 +85,11 @@ footer {
     font-size: 14px;
 }
 
+a {
+    text-decoration: none;
+}
+
+
 @media (max-width: 768px) {
     .goal-text {
         font-size: 40px;
