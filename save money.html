@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <img src="img/banner.png" alt="">
+        <img src="banner.png" alt="">
     </header>
 
     <main>
@@ -22,6 +22,18 @@
                 <h2 id="annualSavings"></h2>
             </div>
         </section>
+
+        <section class="content">
+        <button class="next-button">
+            Next
+            <span class="arrows"></span>
+        </button>
+        </section>
+        <script>
+            document.querySelector('.next-button').addEventListener('click', function() {
+                window.location.href = ".html";
+            });
+        </script>
     </main>
 
     <script>
