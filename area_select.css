@@ -93,13 +93,20 @@ ul li.checked .check-icon::before {
     content: '✓';
     color: white;
 }
-
-/* Right Section */
 .right {
     display: flex;
+    flex-direction: column; /* Stack images vertically */
     justify-content: center;
     align-items: center;
+    position: relative
 }
+
+#funFact {
+    width: 60%; /* Adjust size if needed */
+    margin-top: -40px; 
+    
+}
+
 
 .right img {
     max-width: 80%;
