@@ -30,19 +30,34 @@
         </button>
         </section>
         <script>
+            // Calculate both annual and weekly savings when the user inputs a value
+            function calculateSavings() {
+                const monthlySavings = parseFloat(document.getElementById('monthlySavings').value) || 0;
+                const annualSavings = monthlySavings * 12;  // Annual savings
+                const weeklySavings = monthlySavings / 4;  // Weekly savings
+
+                // Display annual savings
+                document.getElementById('annualSavings').innerText = `$${annualSavings.toFixed(2)}`;
+
+                // Store weekly savings in localStorage
+                localStorage.setItem('weeklySavings', weeklySavings);
+            }
+
+            // Listen for input event to calculate savings on change
+            document.getElementById('monthlySavings').addEventListener('input', calculateSavings);
+
+            // Store weekly savings when user clicks the next button
             document.querySelector('.next-button').addEventListener('click', function() {
+                const monthlySavings = parseFloat(document.getElementById('monthlySavings').value) || 0;
+                const weeklySavings = monthlySavings / 4; // Calculate weekly savings
+
+                // Store the calculated weekly savings in localStorage
+                localStorage.setItem('weeklySavings', weeklySavings);
+
+                // Navigate to the next page
                 window.location.href = "save_money_goal.html";
             });
         </script>
     </main>
-
-    <script>
-        function calculateSavings() {
-            const monthlySavings = parseFloat(document.getElementById('monthlySavings').value) || 0;
-            const annualSavings = monthlySavings * 12;
-            document.getElementById('annualSavings').innerText = `$${annualSavings.toFixed(2)}`;        
-        }
-        document.getElementById('monthlySavings').addEventListener('input', calculateSavings);
-    </script>
 </body>
 </html>

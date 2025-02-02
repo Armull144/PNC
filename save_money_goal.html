@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="goal1.css">
+    <link rel="stylesheet" href="/save_money_goal.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goal Select</title>
-    <link rel="stylesheet" href="/goal1.css">
+    <title>February Goals</title>
 </head>
+
 <body>
     <header>
-        <img src="/img/banner.png" alt="pnc banner">
+        <img src="/img/banner.png" alt="Header Image" class="header-img">
     </header>
 
-<main>
-        
-        <div class="container">
-                <h2>Your Goals for February!</h2>
+    <div class="container">
+        <h2 style="font-size: 2rem; color: #122385; margin-top: 20px;">Your Goals for February!</h2>
+        <div class="oval-box">Feb 1 - Feb 28</div>
+        <div class="oval-box-container">
+            <div class="oval-box-spend">Spend $0 less each week</div>
+            <div class="oval-box-reward">Free any size coffee at Panera Bread</div>
         </div>
-        <div class="Week1">
-                <h2>Weekly: Feb 1 - Feb 28</h2>
-        </div>
-        
-        <div class="Goal1">
-            <img src="/img/SpendGoal6.png" alt="Week 1 Goal" width=50%>
-        </div>
-        
-        <div class="Goal5">
-            <img src="/img/spendGoal7.png" alt="Month Goal" width=30%>
-        </div>
+        <div class="goal-container">
+            <div class="monthly-goal">
+                <h1>Monthly Goal</h1>
+                <div class="goal-header">
+                    <p id="weeklyGoal">Completed if an average of $0 is spent each week</p>
+                    <div class="goal-info">
+                        <ul class="week-list">
+                            <li><input type="checkbox" id="week1"> Week 1</li>
+                            <li><input type="checkbox" id="week2"> Week 2</li>
+                            <li><input type="checkbox" id="week3"> Week 3</li>
+                            <li><input type="checkbox" id="week4"> Week 4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <script>
-            function calculateWeekly() 
-            {
-                const monthlySavings = parseFloat(document.getElementById('monthlySavings').value) || 0;
-                const Weeklysavings = monthlySavings / 4;
-                document.getElementById('Weeklysavings').innerText = `$${Weeklysavings.toFixed(2)}`;        
+            <div class="month-reward">One Month of Free Spotify!</div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            const weeklySavings = localStorage.getItem('weeklySavings');
+
+            if (weeklySavings) {
+                document.querySelector('.oval-box-spend').innerText = `Spend $${parseFloat(weeklySavings).toFixed(2)} less each week`;
+                document.getElementById('weeklyGoal').innerText = `Completed if $${parseFloat(weeklySavings).toFixed(2)} or more is saved each week`;
             }
-            document.getElementById('monthlySavings').addEventListener('input', calculateWeekly);
-        </script>
-
-</main>
+        };
+    </script>
 </body>
+
 </html>

@@ -80,13 +80,11 @@ ul li:hover {
 /* Checked State */
 ul li.checked {
     background: lightgreen;
-    /* Change background when checked */
     color: black;
 }
 
 ul li.checked .check-icon {
     background: green;
-    /* Change check icon color */
 }
 
 ul li.checked .check-icon::before {
@@ -95,14 +93,14 @@ ul li.checked .check-icon::before {
 }
 .right {
     display: flex;
-    flex-direction: column; /* Stack images vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     position: relative
 }
 
 #funFact {
-    width: 60%; /* Adjust size if needed */
+    width: 60%; 
     margin-top: -40px; 
     
 }

@@ -80,13 +80,11 @@ ul li:hover {
 /* Checked State */
 ul li.checked {
     background: lightgreen;
-    /* Change background when checked */
     color: black;
 }
 
 ul li.checked .check-icon {
     background: green;
-    /* Change check icon color */
 }
 
 ul li.checked .check-icon::before {

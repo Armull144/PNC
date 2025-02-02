@@ -5,6 +5,13 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header Image */
+.header-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,10 +26,7 @@ align-items: center;
 gap: 5px;
 
 }
-/* .pnc-text {
-    font-size: 24px;
-    color: white;
-    margin-left: 10px;  /* Adjust margin for the text */ */
+
 .logo img{ 
     width: 50px;
     height: auto;
@@ -121,7 +125,7 @@ main {
 
 .up-section,
 .down-section {
-    width: 50%;  /* Each section takes 48% of the space */
+    width: 50%;  
     padding: 20px;
     box-sizing: border-box;
 }
@@ -176,7 +180,7 @@ main {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Set fixed width for uniform card size */
+    width: 250px; 
     min-height: 120px;
     display: flex;
     align-items: center;
@@ -220,12 +224,12 @@ main {
 }
 @media (max-width: 768px) {
     .bottom-container {
-        flex-direction: column;  /* Stack sections on small screens */
+        flex-direction: column;  
         align-items: center;
     }
 
     .up-section, .down-section {
-        width: 90%; /* Make sections take up more space */
+        width: 90%; 
         margin-bottom: 20px;
     }
 }
@@ -252,7 +256,7 @@ main {
 }
 .image-section img{width: 80%; 
     max-width: 400px; 
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /*round corners*/
+    height: auto; 
+    border-radius: 10px;
 }
     

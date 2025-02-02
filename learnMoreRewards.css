@@ -8,16 +8,16 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        height: 100vh;
         background-color: #ffffff;
         padding: 20px;
         position: relative;
     }
-    header img {
-        width: 100%;
-        max-height: 150px;
-        object-fit: cover;
-    }
+  /* Header Image */
+.header-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
 
     .container{
         font-size: 22px;
@@ -74,9 +74,9 @@
 
     .Goal5 {
         position: absolute;
-        right: -990px; /* Adjust as needed */
-        top: 70%; /* Adjust vertical position */
-        transform: translateY(-50%); /* Centers it vertically */
+        right: -990px;
+        top: 70%; 
+        transform: translateY(-50%);
         width: 1500px; 
         height: auto;
     }
