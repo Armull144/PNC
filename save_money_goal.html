@@ -18,43 +18,26 @@
                 <h2>Your Goals for February!</h2>
         </div>
         <div class="Week1">
-                <h2>Week 1: Feb 1 - Feb 7</h2>
+                <h2>Weekly: Feb 1 - Feb 28</h2>
         </div>
         
         <div class="Goal1">
-            <img src="/img/spendGoal1.png" alt="Week 1 Goal" width=50%>
+            <img src="/img/SpendGoal6.png" alt="Week 1 Goal" width=50%>
         </div>
         
-
-        </div>
-        <div class="Week2">
-                <h2>Week 2: Feb 8 - Feb 14</h2>
-        </div>
-        
-        <div class="Goal2">
-            <img src="/img/spendGoal2.png" alt="Week 2 Goal" width=50%>
-        </div>
-        
-        
-        </div>
-        <div class="Week3">
-                <h2>Week 3: Feb 15 - Feb 21</h2>
+        <div class="Goal5">
+            <img src="/img/spendGoal7.png" alt="Month Goal" width=30%>
         </div>
 
-        <div class="Goal3">
-            <img src="/img/spendGoal3.png" alt="Week 3 Goal" width=50%>
-        </div>
-
-
-        </div>
-        <div class="Week4">
-                <h2>Week 4: Feb 22 - Feb 28</h2>
-        </div>
-
-        <div class="Goal3">
-            <img src="/img/spendGoal4.png" alt="Week 4 Goal" width=50%>
-        </div>
-
+        <script>
+            function calculateWeekly() 
+            {
+                const monthlySavings = parseFloat(document.getElementById('monthlySavings').value) || 0;
+                const Weeklysavings = monthlySavings / 4;
+                document.getElementById('Weeklysavings').innerText = `$${Weeklysavings.toFixed(2)}`;        
+            }
+            document.getElementById('monthlySavings').addEventListener('input', calculateWeekly);
+        </script>
 
 </main>
 </body>
